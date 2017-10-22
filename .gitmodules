@@ -1,0 +1,9 @@
+[submodule "src/themes/ananke"]
+	path = src/themes/ananke
+	url = git@github.com:budparr/gohugo-theme-ananke.git
+[submodule "src/static/js/reveal.js"]
+	path = src/static/js/reveal.js
+	url = git@github.com:hakimel/reveal.js.git
+[submodule "src/static/js/mathjax"]
+	path = src/static/js/mathjax
+	url = git@github.com:mathjax/MathJax.git

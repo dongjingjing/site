@@ -1,0 +1,14 @@
+<script src="{{ "dist/app.bundle.js" | absURL }}" async></script>
+{{ $.Scratch.Set "mathjax" .Site.Params.mathjax }}
+{{ $.Scratch.Set "mathjax" .Params.mathjax }}
+{{ if eq ($.Scratch.Get "mathjax") true }}
+<script src='{{ "js/mathjax/MathJax.js" | absURL }}?config=TeX-AMS_CHTML' async></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+  	inlineMath: [['\\(','\\)']],
+  	displayMath: [['$$','$$'], ['\\[','\\]']]
+  }
+});
+</script>
+{{ end }}
