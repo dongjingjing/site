@@ -3,10 +3,17 @@ language: go
 go:
   - master # This uses automatically the latest version of go
 
+git:
+  submodules: false
+
 addons:
   apt:
     packages:
       - pandoc
+
+before_install:
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - git submodule update --init --recursive
 
 install:
   - go get github.com/spf13/hugo # This provides the latest version of Hugo to Travis CI
