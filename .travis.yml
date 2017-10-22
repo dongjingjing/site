@@ -12,7 +12,7 @@ addons:
       - pandoc
 
 before_install:
-  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules # Travis CI cannot access repo via SSH
   - git submodule update --init --recursive
 
 install:
